@@ -90,7 +90,7 @@ export default function Home() {
     const deleteTodo = async (docId) => {
         try {
             // Delete the todo document with the given ID from the "todos" collection in Firestore.
-            await deleteDoc(doc(db, "todos", docId));
+            await deleteDoc(doc(db, "todoit", docId));
 
             // After deleting the todo, fetch all todos for the current user and update the state with the new data.
             fetchTodos(authUser.uid);
@@ -102,7 +102,7 @@ export default function Home() {
     const makeAsCompleteHander = async (event, docId) => {
         try {
             // Get a reference to the todo document with the given ID in the "todos" collection in Firestore.
-            const todoRef = doc(db, "todos", docId);
+            const todoRef = doc(db, "todoit", docId);
 
             // Update the "completed" field of the todo document to the value of the "checked" property of the event target.
             await updateDoc(todoRef, {
