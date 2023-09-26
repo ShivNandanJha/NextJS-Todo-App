@@ -1,38 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# TodoIt - A Simple Todo App
+![web-screenshot-26-09-2023 (1)](https://github.com/ShivNandanJha/NextJS-Todo-App/assets/115362063/0c46d2f5-d47e-4f00-ac5f-c8e053a6c4ad)
+
+
+TodoIt is a straightforward and efficient todo application built using Next.js, Firebase Storage, and Firebase Authentication. This web application allows users to easily manage their work and schedules in a user-friendly and organized manner. With the added security of authentication, you can be confident that your todo list is private and accessible only to you.
+
+## Features
+
+- **User Authentication**: To use TodoIt, users must create an account or log in with their existing credentials. This ensures the security and privacy of your todos.
+
+- **Add and Edit Todos**: Easily create new tasks and edit existing ones to stay on top of your work and schedules.
+
+- **Check Off Completed Tasks**: Mark tasks as completed to keep track of your progress and maintain a clear todo list.
+
+- **Responsive Design**: TodoIt is designed to work seamlessly on both desktop and mobile devices, ensuring you can manage your todos wherever you are.
 
 ## Getting Started
 
-First, run the development server:
+To run TodoIt locally for development or testing purposes, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```
+   git clone https://github.com/your-username/todoit.git
+   ```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2. Navigate to the project directory:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+   ```
+   cd todoit
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Install the dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```
+   npm install
+   ```
 
-## Learn More
+4. Set up Firebase:
+   - Create a Firebase project on the [Firebase Console](https://console.firebase.google.com/).
+   - Enable Authentication and Firestore services in your Firebase project.
+   - Configure Firebase by adding your Firebase project credentials to the `firebaseConfig` object in the `firebase.js` file located in the `utils` directory.
 
-To learn more about Next.js, take a look at the following resources:
+5. Start the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+6. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to use TodoIt locally.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To deploy TodoIt to a production environment, follow these steps:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Set up a production Firebase project and configure it as described in the "Getting Started" section.
+
+2. Build the production-ready version of the app:
+
+   ```
+   npm run build
+   ```
+
+3. Deploy the app to your hosting provider or Firebase Hosting:
+
+   - For Firebase Hosting, you can use the Firebase CLI to deploy:
+
+     ```
+     npm install -g firebase-tools
+     firebase login
+     firebase init
+     firebase deploy
+     ```
+
+## Contributing
+
+We welcome contributions to make TodoIt even better. If you'd like to contribute
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## Acknowledgments
+
+- Thanks to the Next.js and Firebase communities for providing excellent tools and resources.
+
+## Contact
+
+If you have any questions, issues, or suggestions, please feel free to contact us at [mail](mailto:shivjha1226@gmail.com).
+
+Happy task management with TodoIt! 🚀
